@@ -21,9 +21,9 @@ class HomeView extends GetView<HomeController> {
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                 child: Container(
-                  height: 70,
+                  height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.01),
+                    color: Colors.white.withOpacity(0.05),
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(
                       color: Colors.white.withOpacity(0.2),
@@ -50,17 +50,32 @@ class HomeView extends GetView<HomeController> {
   Widget _navItem(IconData icon, String label, int index) {
     return InkWell(
       onTap: () => controller.changeIndex(index),
+      borderRadius: BorderRadius.circular(20),
       child: Obx(() {
         final isSelected = controller.currentIndex.value == index;
+
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: isSelected ? Colors.cyan : Colors.white70),
-            Text(
-              label,
-              style: TextStyle(
-                color: isSelected ? Colors.cyan : Colors.white70,
-                fontSize: 12,
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: isSelected
+                    ? Colors.white.withOpacity(0.1)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.circular(35),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 17.0,
+                  vertical: 9,
+                ),
+                child: Icon(
+                  icon,
+                  color: isSelected ? Colors.cyan : Colors.white70,
+                  size: 30,
+                ),
               ),
             ),
           ],

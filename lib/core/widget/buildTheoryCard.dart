@@ -14,7 +14,7 @@ class TheoryCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.08),
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: Colors.white.withOpacity(0.15), width: 1.5),
+        border: Border.all(color: Colors.white.withOpacity(0.4), width: 1.5),
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(24),
@@ -30,7 +30,7 @@ class TheoryCard extends StatelessWidget {
                   width: 74,
                   padding: const EdgeInsets.all(12.0),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.08),
+                    color: Colors.white.withOpacity(0.03),
                     borderRadius: BorderRadius.circular(37),
                     border: Border.all(
                       color: Colors.white.withOpacity(0.15),
