@@ -69,7 +69,9 @@ class CustomDrivingAppBar extends StatelessWidget
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Image.asset('assets/images/m-logo.png', height: 30),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(21),
+                            child: Image.asset('assets/images/m-logo.png', height: 30)),
                       ],
                     ),
                   ),

@@ -41,7 +41,7 @@ class LawsView extends GetView<LawController> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 15,
                 crossAxisSpacing: 15,
-                childAspectRatio: 0.60,
+                childAspectRatio: 0.6,
               ),
               itemBuilder: (context, index) {
                 final law = controller.lawList[index];
