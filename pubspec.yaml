@@ -1,7 +1,7 @@
 name: kh_driving_rule
 description: "A new Flutter project."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 
 version: 1.0.0+1
@@ -14,6 +14,9 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   get: ^4.7.3
+  dio: ^5.9.0
+  path_provider: ^2.1.5
+  open_filex: ^4.4.0
 
 dev_dependencies:
   flutter_test:
@@ -23,11 +26,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/data/theory_data.json
+    - assets/data/laws_data.json
     - assets/images/
-  #   - images/a_dot_ham.jpeg
+    - assets/pdf/
+
 
 
   fonts:
@@ -35,4 +39,3 @@ flutter:
       fonts:
         - asset: assets/fonts/KohSantepheap-Regular.ttf
         - asset: assets/fonts/KohSantepheap-Bold.ttf
-        

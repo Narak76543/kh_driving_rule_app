@@ -7,10 +7,10 @@ class LessonModel {
   LessonModel({this.id, this.title, this.content, this.icon});
 
   LessonModel.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    title = json['title'];
+    id      = json['id'];
+    title   = json['title'];
     content = json['content'];
-    icon = json['icon'];
+    icon    = json['icon'];
   }
 
   Map<String, dynamic> toJson() {
