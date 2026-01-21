@@ -6,6 +6,7 @@ import '../controller/home_controller.dart' show HomeController;
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +20,11 @@ class HomeView extends GetView<HomeController> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(40),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                 child: Container(
-                  height: 80,
+                  height: 70,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.05),
+                    color: Colors.white.withOpacity(0.08),
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(
                       color: Colors.white.withOpacity(0.2),
@@ -65,15 +66,16 @@ class HomeView extends GetView<HomeController> {
                     ? Colors.white.withOpacity(0.1)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(35),
+
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 17.0,
-                  vertical: 9,
+                  horizontal: 18.5,
+                  vertical: 5,
                 ),
                 child: Icon(
                   icon,
-                  color: isSelected ? Colors.cyan : Colors.white70,
+                  color: isSelected ? Colors.lightGreenAccent.withOpacity(0.8): Colors.white70,
                   size: 30,
                 ),
               ),

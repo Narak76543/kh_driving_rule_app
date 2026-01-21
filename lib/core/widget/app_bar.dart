@@ -17,12 +17,6 @@ class CustomDrivingAppBar extends StatelessWidget
           height: preferredSize.height + MediaQuery.of(context).padding.top,
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.08),
-            border: Border(
-              bottom: BorderSide(
-                color: Colors.white.withOpacity(0.15),
-                width: 1.5,
-              ),
-            ),
           ),
           child: SafeArea(
             bottom: false,
@@ -31,38 +25,52 @@ class CustomDrivingAppBar extends StatelessWidget
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.arrow_back_ios_new,
-                      color: Colors.white,
-                      size: 20,
-                    ),
-                    onPressed: () => Get.back(),
-                  ),
-
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 0.5,
+                  Image.asset('assets/images/drive.png', height: 40),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        color: Colors.orange.withOpacity(0.8),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-
+                  const SizedBox(width: 10),
                   Container(
-                    width: 40,
-                    height: 40,
+                    height: 45,
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
                     margin: const EdgeInsets.only(right: 8),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Colors.white.withOpacity(0.2)),
                     ),
-                    child: const Icon(
-                      Icons.person,
-                      color: Colors.white70,
-                      size: 26,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset('assets/images/app-logo.png', height: 30),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 45,
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    margin: const EdgeInsets.only(right: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(color: Colors.white.withOpacity(0.2)),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset('assets/images/m-logo.png', height: 30),
+                      ],
                     ),
                   ),
                 ],

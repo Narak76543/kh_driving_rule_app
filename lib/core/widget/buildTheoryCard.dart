@@ -13,7 +13,7 @@ class TheoryCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.white.withOpacity(0.4), width: 1.5),
       ),
       child: ClipRRect(
@@ -26,21 +26,22 @@ class TheoryCard extends StatelessWidget {
               children: [
                 // icon
                 Container(
-                  height: 74,
-                  width: 74,
+                  height: 64,
+                  width: 64,
                   padding: const EdgeInsets.all(12.0),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.03),
-                    borderRadius: BorderRadius.circular(37),
+                    color: Colors.white.withOpacity(0.01),
+                    // borderRadius: BorderRadius.circular(20),
+                    shape: BoxShape.circle,
                     border: Border.all(
-                      color: Colors.white.withOpacity(0.15),
-                      width: 1.5,
+                      color: Colors.lightGreenAccent.withOpacity(0.8),
+                      width: 1,
                     ),
                   ),
                   child: item.icon != null && item.icon!.isNotEmpty
                       ? Image.asset(
                           'assets/images/${item.icon}',
-                          color: Colors.white,
+                          color: Colors.lightBlueAccent.withOpacity(0.8),
                         )
                       : const SizedBox.shrink(),
                 ),
@@ -56,7 +57,7 @@ class TheoryCard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color(0xff616db1),
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -71,13 +72,6 @@ class TheoryCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-
-                // សញ្ញាព្រួញ
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white.withOpacity(0.3),
-                  size: 16,
                 ),
               ],
             ),
