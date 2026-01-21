@@ -1,11 +1,10 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:kh_driving_rule/app/data/models/lesson_model.dart';
+import '../../law/views/law_view.dart';
 import '../views/theory_view.dart';
-import '../views/laws_view.dart';
 import '../views/settings_view.dart';
 
 class HomeController extends GetxController {

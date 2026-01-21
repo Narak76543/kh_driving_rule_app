@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'app/modules/home/binding/home_binding.dart' show HomeBinding;
 import 'app/modules/home/views/home_viewe.dart' show HomeView;
+import 'app/modules/law/binding/law_binding.dart';
+import 'app/modules/law/views/law_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +33,11 @@ class MyApp extends StatelessWidget {
           name: '/home',
           page: () => const HomeView(),
           binding: HomeBinding(),
+        ),
+        GetPage(
+          name: '/law',
+          page: () => const LawsView(),
+          binding: LawBinding(), // ដាក់ Binding នៅទីនេះ
         ),
       ],
     );
