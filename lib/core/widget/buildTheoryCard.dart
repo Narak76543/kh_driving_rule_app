@@ -57,7 +57,7 @@ class TheoryCard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff616db1),
+                          color: Color(0xff00a9cc),
                         ),
                       ),
                       const SizedBox(height: 4),
