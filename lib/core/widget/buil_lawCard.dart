@@ -50,7 +50,7 @@ class LawCard extends StatelessWidget {
                     top: 15,
                     right: 15,
                     child: CircleAvatar(
-                      backgroundColor: Colors.blueAccent.withOpacity(0.8),
+                      backgroundColor: Colors.blueAccent.withOpacity(0.7),
                       radius: 18,
                       child: IconButton(
                         icon: const Icon(
@@ -78,7 +78,6 @@ class LawCard extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
-                  // fontFamily: 'KohSantepheab',
                 ),
               ),
             ),

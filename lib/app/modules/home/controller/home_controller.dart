@@ -9,6 +9,9 @@ import '../views/settings_view.dart';
 
 class HomeController extends GetxController {
   var currentIndex = 0.obs;
+  // home_controller.dart
+  var activeIndex = 0.obs;
+
 
   final List<Widget> pages = [
     const TheoryView(),
