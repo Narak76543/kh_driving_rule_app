@@ -31,7 +31,7 @@ class CustomDrivingAppBar extends StatelessWidget
                     child: Text(
                       title,
                       style: TextStyle(
-                        color: Colors.orange.withOpacity(0.8),
+                        color: Colors.lightBlue.withOpacity(0.8),
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.5,
