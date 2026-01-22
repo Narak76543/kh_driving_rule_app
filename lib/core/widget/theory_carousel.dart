@@ -14,7 +14,6 @@ class TheoryCarousel extends GetView<HomeController> {
       'assets/images/suggestion_img.jpg',
       'assets/images/logo and doc.jpg',
     ];
-
     return Column(
       children: [
         Stack(
