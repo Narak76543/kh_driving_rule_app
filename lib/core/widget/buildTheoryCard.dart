@@ -41,7 +41,6 @@ class TheoryCard extends StatelessWidget {
                   child: item.icon != null && item.icon!.isNotEmpty
                       ? Image.asset(
                           'assets/images/${item.icon}',
-                          color: Colors.lightBlueAccent.withOpacity(0.8),
                         )
                       : const SizedBox.shrink(),
                 ),
@@ -57,7 +56,7 @@ class TheoryCard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff00a9cc),
+                          color: Color(0xffffffff),
                         ),
                       ),
                       const SizedBox(height: 4),
