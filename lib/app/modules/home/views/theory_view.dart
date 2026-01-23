@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kh_driving_rule/app/modules/test/roadTrafficLaw_view.dart';
 import 'package:kh_driving_rule/core/widget/app_bar.dart';
 import 'package:kh_driving_rule/core/widget/buildTheoryCard.dart';
+import 'package:kh_driving_rule/core/widget/list_screen.dart';
 import 'package:kh_driving_rule/core/widget/theory_carousel.dart';
 import '../controller/home_controller.dart';
 
@@ -42,7 +44,9 @@ class TheoryView extends GetView<HomeController> {
                   itemBuilder: (context, index) {
                     return TheoryCard(
                         item: controller.theoryList[index],
-                        onTap: () {}
+                        onTap: () {
+                          Get.to(screen_list[index]);
+                        }
                     );
                   },
                 ),

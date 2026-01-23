@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CustomDrivingAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -15,9 +14,7 @@ class CustomDrivingAppBar extends StatelessWidget
         filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
         child: Container(
           height: preferredSize.height + MediaQuery.of(context).padding.top,
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.08),
-          ),
+          decoration: BoxDecoration(color: Colors.white.withOpacity(0.08)),
           child: SafeArea(
             bottom: false,
             child: Padding(
@@ -71,7 +68,11 @@ class CustomDrivingAppBar extends StatelessWidget
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(21),
-                            child: Image.asset('assets/images/m-logo.png', height: 30)),
+                          child: Image.asset(
+                            'assets/images/m-logo.png',
+                            height: 30,
+                          ),
+                        ),
                       ],
                     ),
                   ),
