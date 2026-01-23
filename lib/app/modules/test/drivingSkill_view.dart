@@ -7,7 +7,22 @@ class DrivingSkillView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("ជំនាញក្នុងការបើកបរ ស្ថិតក្នុងការ អភិវឌ្ឍន៍",style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 50),
+            Image.asset(
+              'assets/icons/system.png',
+              color: Colors.lightBlue,
+              width: 140,
+              height: 140,
+            ),
+            Text(
+              "ជំនាញក្នុងការបើកបរ ស្ថិតក្នុងការ អភិវឌ្ឍន៍",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }

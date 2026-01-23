@@ -33,6 +33,7 @@ flutter:
     - assets/data/laws_data.json
     - assets/images/
     - assets/pdf/
+    - assets/icons/
 
 
 
