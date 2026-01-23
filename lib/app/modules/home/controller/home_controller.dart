@@ -4,19 +4,18 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:kh_driving_rule/app/data/models/lesson_model.dart';
 import '../../law/views/law_view.dart';
-import '../views/theory_view.dart';
 import '../views/settings_view.dart';
+import '../views/theory_view.dart';
 
 class HomeController extends GetxController {
   var currentIndex = 0.obs;
   // home_controller.dart
   var activeIndex = 0.obs;
 
-
   final List<Widget> pages = [
     const TheoryView(),
     const LawsView(),
-    const SettingsView(),
+    const SettingView(),
   ];
 
   var theoryList = <LessonModel>[].obs;

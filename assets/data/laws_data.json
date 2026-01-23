@@ -10,8 +10,33 @@
     "pdfUrl": "assets/pdf/2-law.pdf"
   },
   {
-    "title": "អនុក្រឹត្យស្តីពីការផាកពិន័យ",
+    "title": "ស្លាកសញ្ញាចរាចរណ៍",
+    "coverImage": "3-law-cover.png",
+    "pdfUrl": "assets/pdf/3-law.pdf"
+  },
+  {
+    "title": "ការកំណត់ល្បឿន",
+    "coverImage": "4-law-cover.png",
+    "pdfUrl": "assets/pdf/4-law.pdf"
+  },
+  {
+    "title": "ច្បាប់ចរាចរណ៍ផ្លូវគោក",
     "coverImage": "1-law-cover.png",
     "pdfUrl": "assets/pdf/1-law.pdf"
+  },
+  {
+    "title": "ច្បាប់ស្តីពីផ្លូវថ្នល់",
+    "coverImage": "2-law-cover.png",
+    "pdfUrl": "assets/pdf/2-law.pdf"
+  },
+  {
+    "title": "ស្លាកសញ្ញាចរាចរណ៍",
+    "coverImage": "3-law-cover.png",
+    "pdfUrl": "assets/pdf/3-law.pdf"
+  },
+  {
+    "title": "ការកំណត់ល្បឿន",
+    "coverImage": "4-law-cover.png",
+    "pdfUrl": "assets/pdf/4-law.pdf"
   }
 ]
