@@ -19,12 +19,9 @@ class SettingView extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            // ១. ផ្នែក Profile Header (narak)
             _buildProfileHeader(),
 
             const SizedBox(height: 30),
-
-            // ២. ផ្នែកបញ្ជី Menu ស្ទីល Glassmorphism
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -57,30 +54,48 @@ class SettingView extends StatelessWidget {
   Widget _buildProfileHeader() {
     return Column(
       children: [
-        Container(
-          padding: const EdgeInsets.all(3),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.cyanAccent.withOpacity(0.5),
-              width: 2,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Container(
+            height: 180,
+            width: double.infinity,
+            padding: const EdgeInsets.all(3),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white.withOpacity(0.05),
+              border: Border.all(
+                color: Colors.white.withOpacity(0.5),
+                width: 0.8,
+              ),
             ),
-          ),
-          child: const CircleAvatar(
-            radius: 45,
-            backgroundColor: Colors.white10,
-            child: Icon(Icons.person, size: 50, color: Colors.white70),
-          ),
-        ),
-        const SizedBox(height: 12),
-        const Text(
-          "narak", // ឈ្មោះតាមរូបភាពទី ១៧
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.1,
-          ),
+            child: Row (
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Container(
+                  width: 150,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/developer.png"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                // Expanded(
+                //   child: Text(
+                //     "កម្មវិធីនេះ បង្កើតឡើងក្នុងគោលបំណងនៃការសិក្សាប៉ុណ្ណោះ ។ "
+                //         "ពួកយើងជាក្រុមនិសិត្ស ឆ្នាំទី៣ និងបង្កើត កម្មវិធីនេះដើម្បីបញ្ចប់ "
+                //         "Assignment ថ្នាក់ Mobile Development បង្រៀនដោយ ល"
+                //         "ោកគ្រូ សុខ ពិសិទ្ធ ។ អានបន្ថែមលម្អិតអំពីពួកយើង នឹង អំពីកម្មវិធីនេះ ។ ស"
+                //         "ូមអរគុណ !!----------------------", style: TextStyle(
+                //   fontSize: 15,
+                // ),
+                // ),
+                // ),
+              ],
+            ),
+          )
         ),
       ],
     );
