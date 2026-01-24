@@ -5,7 +5,6 @@ import 'app/modules/home/views/home_viewe.dart' show HomeView;
 import 'app/modules/law/binding/law_binding.dart';
 import 'app/modules/law/views/law_view.dart';
 
-
 void main() {
   runApp(const MyApp());
 }

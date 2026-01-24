@@ -59,7 +59,7 @@ class TheoryCarousel extends GetView<HomeController> {
 
             // Dot Indicator ជាមួយ AnimatedContainer
             Positioned(
-              bottom: 15,
+              bottom: 10,
               child: Obx(
                 () => Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -73,7 +73,7 @@ class TheoryCarousel extends GetView<HomeController> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: isSelected
-                            ? Colors.cyanAccent
+                            ? Colors.blueAccent
                             : Colors.white.withOpacity(0.4),
                         boxShadow: isSelected
                             ? [
