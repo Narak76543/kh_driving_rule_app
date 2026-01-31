@@ -47,7 +47,7 @@ class TheoryCard extends StatelessWidget {
                       ),
                       child: item.icon != null && item.icon!.isNotEmpty
                           ? Image.asset(
-                              'assets/images/${item.icon}',
+                              'assets/images/${item.icon}', color: Colors.white,
                             )
                           : const SizedBox.shrink(),
                     ),
