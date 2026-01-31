@@ -9,7 +9,7 @@ import '../../app/modules/test/generalKnowLedge_view.dart';
 import '../../app/modules/test/transport_view.dart';
 
 List<Widget> screen_list = [
-  RoadTrafficLawView(),
+  TrafficLawView(),
   TrafficSignViews(),
   RightOfWayView(),
   DrivingSkillView(),
