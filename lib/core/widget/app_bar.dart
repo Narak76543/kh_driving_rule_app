@@ -14,7 +14,7 @@ class CustomDrivingAppBar extends StatelessWidget
         filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
         child: Container(
           height: preferredSize.height + MediaQuery.of(context).padding.top,
-          decoration: BoxDecoration(color: Colors.white.withOpacity(0.08)),
+          decoration: BoxDecoration(color: Color(0xff517dce)),
           child: SafeArea(
             bottom: false,
             child: Padding(
@@ -22,13 +22,13 @@ class CustomDrivingAppBar extends StatelessWidget
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset('assets/images/drive.png', height: 40),
+                  Image.asset('assets/images/drive.png', height: 40 , color: Colors.white),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
                       title,
                       style: TextStyle(
-                        color: Colors.lightBlue.withOpacity(0.8),
+                        color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.5,

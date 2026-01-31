@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'TrafficLawController.dart';
 
-class RoadTrafficLawView extends StatelessWidget {
-  const RoadTrafficLawView({super.key});
+class TrafficLawView extends StatelessWidget {
+  const TrafficLawView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // ហៅ Get.put នៅទីនេះ
+    final TrafficLawController controller = Get.put(TrafficLawController());
+
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 50),
-            Image.asset(
-              'assets/icons/system.png',
-              color: Colors.lightBlue,
-              width: 140,
-              height: 140,
-            ),
-            Text(
-              "ច្បាប់ចរាចរណ៍ផ្លូវគោក ស្ថិតក្នុងការ អភិវឌ្ឍន៍",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ),
+      appBar: AppBar(title: const Text("Traffic Law")),
+      body: Obx(() {
+        if (controller.isLoading.value) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        return ListView.builder(
+          itemCount: controller.trafficLaws.length,
+          itemBuilder: (context, index) {
+            final item = controller.trafficLaws[index];
+            return ListTile(title: Text(item.question));
+          },
+        );
+      }),
     );
   }
 }

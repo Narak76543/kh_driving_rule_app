@@ -29,7 +29,7 @@ class TheoryView extends GetView<HomeController> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0 , vertical: 15),
-                    child: Text('ការផ្សព្វផ្សាយ', style: TextStyle( fontSize: 20, color: Colors.white.withOpacity(0.8))),
+                    child: Text('ការផ្សព្វផ្សាយ', style: TextStyle( fontSize: 20, color: Colors.black.withOpacity(0.8))),
                   ),
                 ],
               ),
