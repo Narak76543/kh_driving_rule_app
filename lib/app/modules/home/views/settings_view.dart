@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kh_driving_rule/const/color.dart';
+import 'package:get/get.dart';
+import '../../about_us/about_us_view.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
@@ -6,135 +9,167 @@ class SettingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // ប្រើ Background Gradient ពណ៌ងងឹត (0xFF0B1120) តាមរូបភាពទី ១៤
-      body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFF1E293B), Color(0xFF0B1120)],
-          ),
+      backgroundColor: const Color(0xFFF8FAFC),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: const Text(
+          "Setting",
+          style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold , fontFamily: 'Poppins'),
         ),
-        child: Column(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search, color: kPrimaryColor),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                _buildTargetProfileHeader(),
+                const SizedBox(height: 25),
+              ],
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                _buildSectionTitle("ការប្រឡង និងលទ្ធផល"),
+                _buildTargetMenuItem(
+                  Icons.pedal_bike_rounded,
+                  "តារាងប្រឡងសាកល្បង",
+                ),
+                _buildTargetMenuItem(
+                  Icons.emoji_events_rounded,
+                  "តារាងលេខបានពិន្ទុខ្ពស់",
+                ),
+
+                _buildSectionTitle("ព័ត៌មាន និងទំនាក់ទំនង"),
+                _buildTargetMenuItem(
+                  Icons.format_quote_rounded,
+                  "សាររដ្ឋមន្ត្រី",
+                ),
+                _buildTargetMenuItem(Icons.favorite_rounded, "ណែនាំមិត្តភក្តិ"),
+                _buildTargetMenuItem(
+                  Icons.mail_rounded,
+                  "មតិយោបល់ / ទំនាក់ទំនង",
+                ),
+
+                _buildSectionTitle("ផ្សេងៗ"),
+                _buildTargetMenuItem(Icons.directions_car_rounded, "ដាក់ពាក្យ"),
+                _buildTargetMenuItem(Icons.settings_rounded, "កំណត់"),
+
+                const SizedBox(height: 100),
+              ]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTargetProfileHeader() {
+    return InkWell(
+      onTap: () => Get.to(() => const AboutUsView()),
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 15,
+              offset: const Offset(0, 5),
+            ),
+          ],
+        ),
+        child: Row(
           children: [
-            const SizedBox(height: 60),
-            _buildProfileHeader(),
+            Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                color: kPrimaryColor.withOpacity(0.1),
+                shape: BoxShape.circle,
+                image: const DecorationImage(
+                  image: AssetImage('assets/images/flutter.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
 
-            const SizedBox(height: 30),
-            Expanded(
-              child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+            const SizedBox(width: 20),
+
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _buildSectionTitle("ការប្រឡង និងលទ្ធផល"),
-                  _buildGlassMenuItem(Icons.pedal_bike, "តារាងប្រឡងសាកល្បង"),
-                  _buildGlassMenuItem(
-                    Icons.emoji_events,
-                    "តារាងលេខបានពិន្ទុខ្ពស់",
+                  Text(
+                    "About Us",
+                    style: TextStyle(
+                      color: Color(0xFF1E293B),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18, fontFamily: 'Poppins'
+                    ),
                   ),
-
-                  _buildSectionTitle("ព័ត៌មាន និងទំនាក់ទំនង"),
-                  _buildGlassMenuItem(Icons.format_quote, "សាររដ្ឋមន្ត្រី"),
-                  _buildGlassMenuItem(Icons.favorite, "ណែនាំមិត្តភក្តិ"),
-                  _buildGlassMenuItem(Icons.mail, "មតិយោបល់ / ទំនាក់ទំនង"),
-
-                  _buildSectionTitle("ផ្សេងៗ"),
-                  _buildGlassMenuItem(Icons.directions_car, "ដាក់ពាក្យ"),
-                  _buildGlassMenuItem(Icons.settings, "កំណត់"),
+                  SizedBox(height: 4),
+                  Text(
+                    "Team Members and Project Details",
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
+            // Icon(Icons.arrow_forward_ios, color: Colors.grey[300], size: 16),
           ],
         ),
       ),
     );
   }
 
-  // Widget សម្រាប់ Header (Profile)
-  Widget _buildProfileHeader() {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Container(
-            height: 180,
-            width: double.infinity,
-            padding: const EdgeInsets.all(3),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: Colors.white.withOpacity(0.05),
-              border: Border.all(
-                color: Colors.white.withOpacity(0.5),
-                width: 0.8,
-              ),
-            ),
-            child: Row (
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Container(
-                  width: 150,
-                  height: 130,
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/developer.png"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                // Expanded(
-                //   child: Text(
-                //     "កម្មវិធីនេះ បង្កើតឡើងក្នុងគោលបំណងនៃការសិក្សាប៉ុណ្ណោះ ។ "
-                //         "ពួកយើងជាក្រុមនិសិត្ស ឆ្នាំទី៣ និងបង្កើត កម្មវិធីនេះដើម្បីបញ្ចប់ "
-                //         "Assignment ថ្នាក់ Mobile Development បង្រៀនដោយ ល"
-                //         "ោកគ្រូ សុខ ពិសិទ្ធ ។ អានបន្ថែមលម្អិតអំពីពួកយើង នឹង អំពីកម្មវិធីនេះ ។ ស"
-                //         "ូមអរគុណ !!----------------------", style: TextStyle(
-                //   fontSize: 15,
-                // ),
-                // ),
-                // ),
-              ],
-            ),
-          )
-        ),
-      ],
-    );
-  }
-
-  // Widget សម្រាប់ចំណងជើងផ្នែក (Section Title)
   Widget _buildSectionTitle(String title) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, bottom: 10, top: 10),
+      padding: const EdgeInsets.only(left: 5, bottom: 10, top: 20),
       child: Text(
         title,
-        style: TextStyle(
-          color: Colors.cyanAccent.withOpacity(0.7),
-          fontSize: 13,
+        style: const TextStyle(
+          color: Color(0xFF1E293B),
+          fontSize: 14,
           fontWeight: FontWeight.bold,
+            fontFamily: 'Poppins'
         ),
       ),
     );
   }
 
-  // Widget សម្រាប់ Menu Item (Glass Card)
-  Widget _buildGlassMenuItem(IconData icon, String title) {
+  Widget _buildTargetMenuItem(IconData icon, String title) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.white.withOpacity(0.1)),
-      ),
+      margin: const EdgeInsets.only(bottom: 2),
+      decoration: const BoxDecoration(color: Colors.white),
       child: ListTile(
-        leading: Icon(icon, color: Colors.cyanAccent, size: 24),
+        leading: Icon(icon, color: kPrimaryColor, size: 22),
         title: Text(
           title,
-          style: const TextStyle(color: Colors.white, fontSize: 15),
+          style: const TextStyle(
+            color: Color(0xFF334155),
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'Poppins'
+          ),
         ),
-        trailing: const Icon(
+        trailing: Icon(
           Icons.arrow_forward_ios,
-          color: Colors.white24,
-          size: 16,
+          color: Colors.grey[200],
+          size: 14,
         ),
         onTap: () {},
       ),

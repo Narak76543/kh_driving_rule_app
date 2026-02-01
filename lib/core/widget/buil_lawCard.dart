@@ -16,73 +16,100 @@ class LawCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-        decoration: BoxDecoration(
-          color: kPrimaryColor.withOpacity(0.8),
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Colors.white.withOpacity(0.1),
-            width: 1.2,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Export
-            Expanded(
-              child: Stack(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/${law.coverImage}'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-
-                  // Export/Download
-                  Positioned(
-                    top: 15,
-                    right: 15,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.blueAccent.withOpacity(0.7),
-                      radius: 18,
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.file_download_outlined,
-                          color: Colors.white,
-                          size: 18,
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Stack(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey[100],
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/${law.coverImage}'),
+                          fit: BoxFit.cover,
                         ),
-                        onPressed: onDownload,
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
 
-            // title
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
-              child: Text(
-                law.title,
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
+                    Positioned(
+                      top: 15,
+                      right: 15,
+                      child: GestureDetector(
+                        onTap: onDownload,
+                        child: Container(
+                          padding: const EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.9),
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 4,
+                              )
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.file_download_outlined,
+                            color: kPrimaryColor, // ពណ៌ Teal 0xFF1A4958
+                            size: 18,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ],
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 10, 15),
+                child: Column(
+                  children: [
+                    Text(
+                      law.title,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xFF1E293B),
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        height: 1.3,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Container(
+                      width: 30,
+                      height: 3,
+                      decoration: BoxDecoration(
+                        color: kPrimaryColor.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
