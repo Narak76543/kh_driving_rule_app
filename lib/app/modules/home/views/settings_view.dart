@@ -118,18 +118,21 @@ class SettingView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "About Us",
+                    "អំពីក្រុមរបស់យើង",
                     style: TextStyle(
                       color: Color(0xFF1E293B),
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
-                      fontFamily: 'Poppins',
+                      fontFamily: 'KohSantepheap',
                     ),
                   ),
                   SizedBox(height: 4),
                   Text(
-                    "Team Members and Project Details",
-                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                    "មិត្តរួមក្រុម និង គម្រោងរបស់ក្រុមយើង",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'KohSantepheap',
+                        fontSize: 12),
                   ),
                 ],
               ),
