@@ -159,6 +159,7 @@ class _VehicleTechViewState extends State<VehicleTechView> {
                             fontSize: 14,
                             fontFamily: 'KohSantepheap',
                             height: 1.5,
+
                           ),
                         ),
                       ),
