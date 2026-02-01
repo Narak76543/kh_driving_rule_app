@@ -49,7 +49,7 @@ class AboutUsView extends StatelessWidget {
               role: "អ្នកអភិវឌ្ឍន៍  សូហ្វវែរ",
               bio:
                   "និស្សិតឆ្នាំទី៣ ជំនាញអភិវឌ្ឍន៍កម្មវិធីទូរស័ព្ទ ដែលមានចំណូលចិត្តក្នុងការបង្កើតដំណោះស្រាយបច្ចេកវិទ្យាដ៏រហ័ស និងមានប្រសិទ្ធភាព។ ផ្តោតសំខាន់លើការសរសេរកូដឱ្យមានរបៀប និងងាយស្រួលក្នុងការថែទាំ។",
-              skills: ["Flutter", "Python", "FastAPI", "Git"],
+              skills: ["Flutter", "Python", "FastAPI", "PosgrSQL"],
               imagePath: "assets/images/narak.png",
             ),
 
@@ -67,8 +67,8 @@ class AboutUsView extends StatelessWidget {
               role: "អ្នកអភិវឌ្ឍន៍ គេហទំព័រ",
               bio:
                   "ខ្ញុំជាអ្នកចូលចិត្តបច្ចេកវិទ្យា និងការអភិវឌ្ឍកម្មវិធី។ ខ្ញុំកំពុងសិក្សា Web Development និង Mobile App Development និងចង់ក្លាយជាអ្នកអភិវឌ្ឍកម្មវិធីជំនាញ។ ខ្ញុំស្រលាញ់ការស្រាវជ្រាវ ការសិក្សាថ្មីៗ និងការបង្កើត Project ផ្ទាល់ខ្លួន។",
-              skills: ["Research", "JSON", "Database", "+3"],
-              imagePath: "assets/images/member3.png",
+              skills: ["HTML", "CSS", "Bootstrap", "JavaScripts","Git"],
+              imagePath: "assets/images/pula.png",
             ),
 
             _buildMemberProfileCard(
