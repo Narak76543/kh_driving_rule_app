@@ -55,7 +55,7 @@ class AboutUsView extends StatelessWidget {
 
             _buildMemberProfileCard(
               name: "សេម វិសុត",
-              role: "Flutter Developer",
+              role: "អ្នកអភិវឌ្ឍន៍  សូហ្វវែរ",
               bio:
                   "ជម្រាបសួរ! ខ្ញុំឈ្មោះ សេម វិសុតខ្ញុំជាអ្នកអភិវឌ្ឍន៍កម្មវិធីចំនួន ២ ឆ្នាំបទពិសោធន៍។ ខ្ញុំមានជំនាញខាងការបង្កើតគេហទំព័រទំនើបៗ និងកម្មវិធីទូរស័ព្ទ។ ខ្ញុំចូលចិត្តដោះស្រាយបញ្ហាកម្មវិធី និងបង្កើតដំណោះស្រាយដែលមានប្រសិទ្ធិភាពខ្ពស់។បច្ចុប្បន្ន ខ្ញុំកំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រផ្នែក អភិវឌ្ឍន៍  សូហ្វវែរ នៅសាកលវិទ្យាល័យន័រតុន។ បច្ចុប្បន្ន ខ្ញុំកំពុងធ្វើការជាមួយបច្ចេកវិទ្យាទំនើបៗដូចជា Java Programming, Python, Flutter, និង ឧបករណ៍ AI ជាដើម។ចំណាប់អារម្មណ៍ផ្ទាល់ខ្លួន៖ ខ្ញុំចូលចិត្តសរសេរកូដនៅពេលយប់ជាមួយកាហ្វេមួយកែវ និងស្តាប់តន្ត្រីសម័យពីដើម។",
               skills: ["Flutter", "Python", "Laravel", "+2"],
@@ -278,7 +278,7 @@ Widget _buildMemberProfileCard({
           style: TextStyle(
             fontFamily: 'kohsantepheap',
             fontSize: 14,
-            color: Colors.grey[400],
+            color: Colors.redAccent,
             letterSpacing: 0.8,
             fontWeight: FontWeight.w500,
           ),
