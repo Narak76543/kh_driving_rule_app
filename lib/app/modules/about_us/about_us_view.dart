@@ -22,11 +22,12 @@ class AboutUsView extends StatelessWidget {
           onPressed: () => Get.back(),
         ),
         title: const Text(
-          "About Us",
+          "អំពីក្រុមរបស់ពួកយើង",
           style: TextStyle(
             color: Color(0xFF1E293B),
             fontWeight: FontWeight.bold,
             fontSize: 20,
+            fontFamily: 'kohsantepheap'
           ),
         ),
       ),
@@ -36,46 +37,46 @@ class AboutUsView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSectionTitle("About Project"),
+            _buildSectionTitle("អំពីគម្រោងនេះ"),
             _buildProjectDescription(),
 
             const SizedBox(height: 30),
-            _buildSectionTitle("Our Team Members"),
+            _buildSectionTitle("សមាជិកក្រុមរបស់យើង"),
             const SizedBox(height: 10),
 
             _buildMemberProfileCard(
-              name: "Sarat Narak",
-              role: "Lead Developer",
+              name: "សារ៉ាត់ ណារ៉ាក់",
+              role: "អ្នកអភិវឌ្ឍន៍  សូហ្វវែរ",
               bio:
-                  "Narak is a 3rd-year student specializing in Flutter & FastAPI development, focused on building efficient mobile solutions.",
-              skills: ["Flutter", "Dart", "FastAPI", "Git"],
+                  "និស្សិតឆ្នាំទី៣ ជំនាញអភិវឌ្ឍន៍កម្មវិធីទូរស័ព្ទ ដែលមានចំណូលចិត្តក្នុងការបង្កើតដំណោះស្រាយបច្ចេកវិទ្យាដ៏រហ័ស និងមានប្រសិទ្ធភាព។ ផ្តោតសំខាន់លើការសរសេរកូដឱ្យមានរបៀប និងងាយស្រួលក្នុងការថែទាំ។",
+              skills: ["Flutter", "Python", "FastAPI", "Git"],
               imagePath: "assets/images/narak.png",
             ),
 
             _buildMemberProfileCard(
-              name: "Sem Visut",
+              name: "សេម វិសុត",
               role: "Flutter Developer",
               bio:
-                  "Creative designer with a passion for clean, user-friendly interfaces and modern mobile application layouts.",
-              skills: ["Figma", "Design", "Color Theory", "+2"],
+                  "ជម្រាបសួរ! ខ្ញុំឈ្មោះ សេម វិសុតខ្ញុំជាអ្នកអភិវឌ្ឍន៍កម្មវិធីចំនួន ២ ឆ្នាំបទពិសោធន៍។ ខ្ញុំមានជំនាញខាងការបង្កើតគេហទំព័រទំនើបៗ និងកម្មវិធីទូរស័ព្ទ។ ខ្ញុំចូលចិត្តដោះស្រាយបញ្ហាកម្មវិធី និងបង្កើតដំណោះស្រាយដែលមានប្រសិទ្ធិភាពខ្ពស់។បច្ចុប្បន្ន ខ្ញុំកំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រផ្នែក អភិវឌ្ឍន៍  សូហ្វវែរ នៅសាកលវិទ្យាល័យន័រតុន។ បច្ចុប្បន្ន ខ្ញុំកំពុងធ្វើការជាមួយបច្ចេកវិទ្យាទំនើបៗដូចជា Java Programming, Python, Flutter, និង ឧបករណ៍ AI ជាដើម។ចំណាប់អារម្មណ៍ផ្ទាល់ខ្លួន៖ ខ្ញុំចូលចិត្តសរសេរកូដនៅពេលយប់ជាមួយកាហ្វេមួយកែវ និងស្តាប់តន្ត្រីសម័យពីដើម។",
+              skills: ["Flutter", "Python", "Laravel", "+2"],
               imagePath: "assets/images/visut.png",
             ),
 
             _buildMemberProfileCard(
-              name: "Chum Phula",
-              role: "Web Developer",
+              name: "ជុំ ភូឡា",
+              role: "អ្នកអភិវឌ្ឍន៍ គេហទំព័រ",
               bio:
-                  "Focused on structuring traffic rule data and ensuring all technical information is accurate and up-to-date.",
+                  "ខ្ញុំជាអ្នកចូលចិត្តបច្ចេកវិទ្យា និងការអភិវឌ្ឍកម្មវិធី។ ខ្ញុំកំពុងសិក្សា Web Development និង Mobile App Development និងចង់ក្លាយជាអ្នកអភិវឌ្ឍកម្មវិធីជំនាញ។ ខ្ញុំស្រលាញ់ការស្រាវជ្រាវ ការសិក្សាថ្មីៗ និងការបង្កើត Project ផ្ទាល់ខ្លួន។",
               skills: ["Research", "JSON", "Database", "+3"],
               imagePath: "assets/images/member3.png",
             ),
 
             _buildMemberProfileCard(
-              name: "Ngov Menghai",
+              name: "ង៉ូវ ម៉េងហៃ",
               role: "Full Stack Developer",
               bio:
-                  "Responsible for testing application features and ensuring a smooth, bug-free experience for all users.",
-              skills: ["Testing", "Bug Fix", "Analysis", "+1"],
+                  "អ្នកជំនាញត្រួតពិនិត្យ និងស្វែងរកចំណុចខ្វះខាត ដើម្បីធានាថាគ្រប់មុខងារទាំងអស់របស់កម្មវិធី ដំណើរការបានយ៉ាងរលូន និងគ្មានកំហុស។ ផ្តោតលើការផ្តល់ជូននូវបទពិសោធន៍ដ៏ល្អបំផុតសម្រាប់អ្នកប្រើប្រាស់។",
+              skills: ["React.Js", "Flutter", "Flask", "+1"],
               imagePath: "assets/images/menghai.png",
             ),
 
@@ -95,6 +96,7 @@ class AboutUsView extends StatelessWidget {
           fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Color(0xFF1E293B),
+          fontFamily: 'KohSantepheap',
         ),
       ),
     );
@@ -117,13 +119,13 @@ class AboutUsView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ១. ការពិពណ៌នាទូទៅ
           const Text(
-            "កម្មវិធី 'ច្បាប់ចរាចរណ៍' ត្រូវបានបង្កើតឡើងក្នុងគោលបំណងសិក្សា Assignment ឆ្នាំទី៣ ថ្នាក់ Mobile App Development។ យើងមានបំណងជួយសម្រួលដល់ការសិក្សា និងយល់ដឹងអំពីច្បាប់ចរាចរណ៍នៅកម្ពុជា។",
+            "កម្មវិធី 'ច្បាប់ចរាចរណ៍' ត្រូវបានបង្កើតឡើងក្នុងគោលបំណងសិក្សា និងធ្វើកិច្ចការស្រាវជ្រាវ ឆ្នាំទី៣ ថ្នាក់អភិវឌ្ឍន៍កម្មវិធីទូរស័ព្ទដៃ។ យើងមានបំណងធ្វើការអនុវត្តលើមេរៀន និងម្យ៉ាងវិញទៀតអាចយល់ដឹងអំពីច្បាប់ចរាចរណ៍នៅកម្ពុជា។",
             style: TextStyle(
               color: Color(0xFF64748B),
               fontSize: 14,
               height: 1.6,
+              fontFamily:  'kohsantepheap'
             ),
           ),
           const Padding(
@@ -142,12 +144,12 @@ class AboutUsView extends StatelessWidget {
           _buildTechRow(
             Icons.bolt,
             "Architecture",
-            "Flutter SDK ^3.10.1 (Material 3)",
+            "Flutter SDK 3.10.1",
           ),
           _buildTechRow(
             Icons.layers,
             "State Management",
-            "GetX Framework (^4.7.3)",
+            "GetX",
           ),
           _buildTechRow(
             Icons.storage,
@@ -157,12 +159,12 @@ class AboutUsView extends StatelessWidget {
           _buildTechRow(
             Icons.font_download,
             "Typography",
-            "KohSantepheap (Khmer/English Support)",
+            "KohSantepheap , Poppins",
           ),
           _buildTechRow(
             Icons.devices,
-            "Optimization",
-            "High-performance on Samsung A05 & MSI Cyborg",
+            "Tools",
+            "VS Code , Android Studio, GitHub , GitBash",
           ),
         ],
       ),
@@ -272,7 +274,7 @@ Widget _buildMemberProfileCard({
         Text(
           name,
           style: const TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'kohsantepheap',
             fontSize: 22,
             fontWeight: FontWeight.bold,
             color: Color(0xFF1E293B),
@@ -282,7 +284,7 @@ Widget _buildMemberProfileCard({
         Text(
           role,
           style: TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'kohsantepheap',
             fontSize: 14,
             color: Colors.grey[400],
             letterSpacing: 0.8,
@@ -304,7 +306,7 @@ Widget _buildMemberProfileCard({
           bio,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'kohsantepheap',
             fontSize: 14,
             color: Colors.grey[600],
             height: 1.5,
@@ -317,12 +319,12 @@ Widget _buildMemberProfileCard({
         TextButton(
           onPressed: () {},
           child: const Text(
-            "VIEW PROFILE",
+            "ឆែកមើលប្រវត្តិរូប",
             style: TextStyle(
-              fontFamily: 'Poppins',
+              fontFamily: 'kohsantepheap',
               color: kPrimaryColor,
               fontWeight: FontWeight.w600,
-              fontSize: 13,
+              fontSize: 17,
               letterSpacing: 1.1,
             ),
           ),

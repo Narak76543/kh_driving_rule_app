@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:kh_driving_rule/const/color.dart'; // ប្រាកដថា kPrimaryColor គឺ 0xFF1A4958
+import 'package:kh_driving_rule/const/color.dart';
 import '../../app/modules/home/controller/home_controller.dart';
 
 class TheoryCarousel extends GetView<HomeController> {
@@ -28,7 +28,8 @@ class TheoryCarousel extends GetView<HomeController> {
               viewportFraction: 0.9,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
               autoPlayCurve: Curves.easeInOutQuart,
-              onPageChanged: (index, reason) => controller.activeIndex.value = index,
+              onPageChanged: (index, reason) =>
+                  controller.activeIndex.value = index,
             ),
             itemBuilder: (context, index, realIndex) {
               return _buildCarouselItem(_images[index]);
@@ -72,7 +73,7 @@ class TheoryCarousel extends GetView<HomeController> {
 
   Widget _buildDotIndicator() {
     return Obx(
-          () => Row(
+      () => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: List.generate(_images.length, (index) {
@@ -85,7 +86,9 @@ class TheoryCarousel extends GetView<HomeController> {
             margin: const EdgeInsets.symmetric(horizontal: 4.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: isSelected ? kPrimaryColor : Colors.blueGrey.withOpacity(0.2),
+              color: isSelected
+                  ? kPrimaryColor
+                  : Colors.blueGrey.withOpacity(0.2),
               boxShadow: [
                 BoxShadow(
                   color: isSelected

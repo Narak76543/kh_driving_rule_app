@@ -94,6 +94,7 @@ class LawCard extends StatelessWidget {
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
                         height: 1.3,
+                        fontFamily: 'Poppins'
                       ),
                     ),
                     const SizedBox(height: 8),
