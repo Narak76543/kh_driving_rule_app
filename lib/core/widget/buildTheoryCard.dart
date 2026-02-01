@@ -86,6 +86,7 @@ class TheoryCard extends StatelessWidget {
             fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Color(0xFF1E293B),
+            fontFamily: 'KohSantepheap',
           ),
         ),
         const SizedBox(height: 6),
@@ -96,6 +97,7 @@ class TheoryCard extends StatelessWidget {
           style: TextStyle(
             fontSize: 13,
             color: Colors.grey[600],
+            fontFamily: 'KohSantepheap',
             height: 1.4,
           ),
         ),
