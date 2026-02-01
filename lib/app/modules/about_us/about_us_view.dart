@@ -27,7 +27,7 @@ class AboutUsView extends StatelessWidget {
             color: Color(0xFF1E293B),
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            fontFamily: 'kohsantepheap'
+            fontFamily: 'kohsantepheap',
           ),
         ),
       ),
@@ -59,7 +59,7 @@ class AboutUsView extends StatelessWidget {
               bio:
                   "ជម្រាបសួរ! ខ្ញុំឈ្មោះ សេម វិសុតខ្ញុំជាអ្នកអភិវឌ្ឍន៍កម្មវិធីចំនួន ២ ឆ្នាំបទពិសោធន៍។ ខ្ញុំមានជំនាញខាងការបង្កើតគេហទំព័រទំនើបៗ និងកម្មវិធីទូរស័ព្ទ។ ខ្ញុំចូលចិត្តដោះស្រាយបញ្ហាកម្មវិធី និងបង្កើតដំណោះស្រាយដែលមានប្រសិទ្ធិភាពខ្ពស់។បច្ចុប្បន្ន ខ្ញុំកំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រផ្នែក អភិវឌ្ឍន៍  សូហ្វវែរ នៅសាកលវិទ្យាល័យន័រតុន។ បច្ចុប្បន្ន ខ្ញុំកំពុងធ្វើការជាមួយបច្ចេកវិទ្យាទំនើបៗដូចជា Java Programming, Python, Flutter, និង ឧបករណ៍ AI ជាដើម។ចំណាប់អារម្មណ៍ផ្ទាល់ខ្លួន៖ ខ្ញុំចូលចិត្តសរសេរកូដនៅពេលយប់ជាមួយកាហ្វេមួយកែវ និងស្តាប់តន្ត្រីសម័យពីដើម។",
               skills: ["Flutter", "Python", "Laravel", "+2"],
-              imagePath: "assets/images/visut.png",
+              imagePath: "assets/images/visut2.jpg",
             ),
 
             _buildMemberProfileCard(
@@ -67,7 +67,7 @@ class AboutUsView extends StatelessWidget {
               role: "អ្នកអភិវឌ្ឍន៍ គេហទំព័រ",
               bio:
                   "ខ្ញុំជាអ្នកចូលចិត្តបច្ចេកវិទ្យា និងការអភិវឌ្ឍកម្មវិធី។ ខ្ញុំកំពុងសិក្សា Web Development និង Mobile App Development និងចង់ក្លាយជាអ្នកអភិវឌ្ឍកម្មវិធីជំនាញ។ ខ្ញុំស្រលាញ់ការស្រាវជ្រាវ ការសិក្សាថ្មីៗ និងការបង្កើត Project ផ្ទាល់ខ្លួន។",
-              skills: ["HTML", "CSS", "Bootstrap", "JavaScripts","Git"],
+              skills: ["HTML", "CSS", "Bootstrap", "JavaScripts", "Git"],
               imagePath: "assets/images/pula.png",
             ),
 
@@ -125,7 +125,7 @@ class AboutUsView extends StatelessWidget {
               color: Color(0xFF64748B),
               fontSize: 14,
               height: 1.6,
-              fontFamily:  'kohsantepheap'
+              fontFamily: 'kohsantepheap',
             ),
           ),
           const Padding(
@@ -141,16 +141,8 @@ class AboutUsView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          _buildTechRow(
-            Icons.bolt,
-            "Architecture",
-            "Flutter SDK 3.10.1",
-          ),
-          _buildTechRow(
-            Icons.layers,
-            "State Management",
-            "GetX",
-          ),
+          _buildTechRow(Icons.bolt, "Architecture", "Flutter SDK 3.10.1"),
+          _buildTechRow(Icons.layers, "State Management", "GetX"),
           _buildTechRow(
             Icons.storage,
             "Data Handling",
