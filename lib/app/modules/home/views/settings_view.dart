@@ -14,7 +14,7 @@ class SettingView extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
-          "Setting",
+          "ការកំណត់",
           style: TextStyle(
             color: kPrimaryColor,
             fontWeight: FontWeight.bold,
