@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kh_driving_rule/const/color.dart';
 import '../controller/home_controller.dart' show HomeController;
 
 class HomeView extends GetView<HomeController> {
@@ -27,7 +28,7 @@ class HomeView extends GetView<HomeController> {
                     color: Colors.white.withOpacity(0.08),
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(
-                      color: Colors.white.withOpacity(0.2),
+                      color: kPrimaryColor.withOpacity(0.2),
                       width: 1.5,
                     ),
                   ),
@@ -75,7 +76,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 child: Icon(
                   icon,
-                  color: isSelected ? Colors.lightGreenAccent.withOpacity(0.8): Colors.white70,
+                  color: isSelected ? kPrimaryColor: Colors.white70,
                   size: 30,
                 ),
               ),

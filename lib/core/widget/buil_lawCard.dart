@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kh_driving_rule/const/color.dart';
 import '../../app/data/models/law_model.dart';
 
 class LawCard extends StatelessWidget {
@@ -20,7 +21,7 @@ class LawCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.05),
+          color: kPrimaryColor.withOpacity(0.8),
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             color: Colors.white.withOpacity(0.1),
