@@ -8,8 +8,9 @@ import '../views/settings_view.dart';
 import '../views/theory_view.dart';
 
 class HomeController extends GetxController {
+  late PageController pageController;
+
   var currentIndex = 0.obs;
-  // home_controller.dart
   var activeIndex = 0.obs;
 
   final List<Widget> pages = [
@@ -24,7 +25,14 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    pageController = PageController(initialPage: currentIndex.value);
     loadTheoryFromJson();
+  }
+
+  @override
+  void onClose() {
+    pageController.dispose();
+    super.onClose();
   }
 
   Future<void> loadTheoryFromJson() async {
@@ -35,12 +43,9 @@ class HomeController extends GetxController {
       );
 
       final List<dynamic> data = json.decode(response);
-      print("Loaded ${data.length} items from JSON");
-
       theoryList.assignAll(data.map((e) => LessonModel.fromJson(e)).toList());
-      print("Theory list now has ${theoryList.length} items");
     } catch (e) {
-      print("Error loading JSON: $e");
+      debugPrint("Error loading JSON: $e");
     } finally {
       isLoading(false);
     }
@@ -48,5 +53,10 @@ class HomeController extends GetxController {
 
   void changeIndex(int index) {
     currentIndex.value = index;
+    pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 100),
+      curve: Curves.easeInOutQuart,
+    );
   }
 }

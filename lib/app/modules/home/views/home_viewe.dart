@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(40),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                 child: Container(
                   height: 70,
                   decoration: BoxDecoration(
@@ -67,6 +67,10 @@ class HomeView extends GetView<HomeController> {
                     ? Colors.white.withOpacity(0.1)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(35),
+                border: Border.all(
+                  color: isSelected ? kPrimaryColor : Colors.transparent,
+                  width: isSelected ? 1.5 : 0,
+                ),
 
               ),
               child: Padding(
@@ -76,7 +80,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 child: Icon(
                   icon,
-                  color: isSelected ? kPrimaryColor: Colors.white70,
+                  color: isSelected ? kPrimaryColor: Colors.grey,
                   size: 30,
                 ),
               ),
