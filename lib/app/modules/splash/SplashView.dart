@@ -13,7 +13,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 30), () {
+    Timer(const Duration(seconds: 3), () {
       Get.offAllNamed('/home');
     });
   }
@@ -24,10 +24,7 @@ class _SplashViewState extends State<SplashView> {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/sp_bg.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/sp_bg.jpg', fit: BoxFit.cover),
           ),
 
           Positioned.fill(
@@ -45,23 +42,15 @@ class _SplashViewState extends State<SplashView> {
             ),
           ),
 
-          // ៣. ខ្លឹមសារអក្សរ និង Logo នៅខាងមុខ
           SafeArea(
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(flex: 2),
-
-                  // Logo របស់អ្នក
-                  Image.asset(
-                    'assets/images/app-logo.png',
-                    height: 120,
-                  ),
+                  Image.asset('assets/images/app-logo.png', height: 120),
 
                   const SizedBox(height: 20),
-
-                  // ចំណងជើងធំ
                   const Text(
                     "CAMBODIA\nDRIVING RULES",
                     textAlign: TextAlign.center,
