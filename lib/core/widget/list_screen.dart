@@ -13,7 +13,7 @@ List<Widget> screen_list = [
   TrafficSignViews(),
   RightOfWayView(),
   DrivingSkillView(),
-  VihicleTechnicView(),
+  VehicleTechView (),
   FirstAidView(),
   TransportView(),
   GeneralKnowLedgeView(),
