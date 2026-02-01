@@ -15,7 +15,11 @@ class SettingView extends StatelessWidget {
         elevation: 0,
         title: const Text(
           "Setting",
-          style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold , fontFamily: 'Poppins'),
+          style: TextStyle(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Poppins',
+          ),
         ),
         actions: [
           IconButton(
@@ -118,7 +122,8 @@ class SettingView extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xFF1E293B),
                       fontWeight: FontWeight.bold,
-                      fontSize: 18, fontFamily: 'Poppins'
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
                     ),
                   ),
                   SizedBox(height: 4),
@@ -145,7 +150,7 @@ class SettingView extends StatelessWidget {
           color: Color(0xFF1E293B),
           fontSize: 14,
           fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins'
+          fontFamily: 'KohSantepheap',
         ),
       ),
     );
@@ -163,7 +168,7 @@ class SettingView extends StatelessWidget {
             color: Color(0xFF334155),
             fontSize: 15,
             fontWeight: FontWeight.w500,
-            fontFamily: 'Poppins'
+            fontFamily: 'KohSantepheap',
           ),
         ),
         trailing: Icon(
